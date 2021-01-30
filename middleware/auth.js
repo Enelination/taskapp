@@ -6,7 +6,7 @@ function auth(req,res,next){
 
     //token check
     if(!token){
-        res.status(401).json({msg:'No token ,access denied'})
+       return res.status(401).json({msg:'No token ,access denied'})
     }
     try {
         //token verify
